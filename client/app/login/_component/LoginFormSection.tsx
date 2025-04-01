@@ -9,7 +9,7 @@ function LoginFormSection() {
         <h1 className="text-3xl font-bold">Welcome Back</h1>
         <p className="font-light">Sign in to access your account</p>
       </div>
-      <div className="shadow-lg shadow-gray-400/50 w-full max-w-[400px] md:p-8 p-4 flex flex-col gap-4">
+      <div className="shadow-lg shadow-gray-300/50 w-full max-w-[400px] md:p-8 p-4 flex flex-col gap-4 rounded-lg">
         <LoginForm />
         <div className="flex items-center gap-3">
           <div className="h-[1px] flex-1 bg-foreground/15"></div>

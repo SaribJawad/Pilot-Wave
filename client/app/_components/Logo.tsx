@@ -10,7 +10,7 @@ function Logo({ iconColor = "#ffffff", textColor = "#ffffff" }: ILogoProps) {
     <div className="flex items-center  gap-2">
       <PiFinnTheHumanFill size={28} color={iconColor} />
       <h1 className="text-xl font-bold" style={{ color: textColor }}>
-        PostPilot
+        PilotWave
       </h1>
     </div>
   );
