@@ -7,7 +7,7 @@ function SignupFormSection() {
     <section className="p-5 flex flex-col items-center justify-center gap-10 md:py-10 py-20">
       <div className="text-center flex flex-col gap-3">
         <h1 className="text-3xl font-bold">Create Account</h1>
-        <p className="font-light">Sign up to get started with PostMaster</p>
+        <p className="font-light">Sign up to get started with PilotWave</p>
       </div>
       <div className="shadow-lg shadow-gray-300/50 w-full max-w-[400px] md:p-8 p-4 flex flex-col gap-4 rounded-lg">
         <SignupForm />
