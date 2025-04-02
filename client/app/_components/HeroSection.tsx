@@ -2,7 +2,7 @@ import { Button } from "./ui/button";
 
 function HeroSection() {
   return (
-    <section className="mt-[60px]  text-foreground bg-background-secondary w-full sm:px-10 px-4 py-20">
+    <section className="lg:mt-[60px] mt-[53px]  text-foreground bg-background-secondary w-full sm:px-10 px-4 py-20">
       <div className="w-full lg:max-w-[80rem] max-w-[40rem] grid lg:grid-cols-2 grid-cols-1 mx-auto gap-5 ">
         {/* left-section */}
         <section className="flex flex-col gap-8 lg:text-start  sm:text-center text-start   ">

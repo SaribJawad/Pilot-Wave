@@ -39,7 +39,7 @@ function TestimonialsSection() {
         title="Testimonials"
         heading="Loved by Social Media Managers"
       />
-      <div className=" w-full lg:max-w-[80rem] mx-auto grid lg:grid-cols-3 grid-cols-1 gap-10">
+      <div className=" w-full lg:max-w-[80rem] mx-auto grid lg:grid-cols-3 grid-cols-1 gap-10 px-4">
         {testimonials.map((testimonial, index) => (
           <TestimonialCard key={index} {...testimonial} />
         ))}
