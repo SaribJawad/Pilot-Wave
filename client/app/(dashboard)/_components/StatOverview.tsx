@@ -1,4 +1,3 @@
-import { IoArrowUpOutline } from "react-icons/io5";
 import DashboardStatCard from "../dashboard/_components/DashboardStatCard";
 
 interface IStatOverviewProps {

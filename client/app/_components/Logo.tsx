@@ -1,4 +1,3 @@
-import { PiFinnTheHumanFill } from "react-icons/pi";
 import { BsRobot } from "react-icons/bs";
 
 interface ILogoProps {
@@ -9,7 +8,7 @@ interface ILogoProps {
 function Logo({ iconColor = "#ffffff", textColor = "#ffffff" }: ILogoProps) {
   return (
     <div className="flex items-center  gap-2">
-      <BsRobot size={28} color={iconColor} />
+      <BsRobot size={25} color={iconColor} />
       <h1 className="text-xl font-bold" style={{ color: textColor }}>
         PilotWave
       </h1>

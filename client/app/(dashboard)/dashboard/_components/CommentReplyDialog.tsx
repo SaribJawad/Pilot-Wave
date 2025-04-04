@@ -11,7 +11,6 @@ import Image from "next/image";
 import { LuSend } from "react-icons/lu";
 import { SlSocialInstagram } from "react-icons/sl";
 import { Input } from "@/app/_components/ui/input";
-import { PiFinnTheHumanFill } from "react-icons/pi";
 import { BsRobot } from "react-icons/bs";
 import { IoClose } from "react-icons/io5";
 

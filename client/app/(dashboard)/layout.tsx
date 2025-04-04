@@ -1,15 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "../globals.css";
 import { ToasterWithMax } from "../_wrappers/TosterWithMax";
 import DashboardNavbar from "./_components/DashboardNavbar";
-import { SidebarProvider, SidebarTrigger } from "../_components/ui/sidebar";
+import { SidebarProvider } from "../_components/ui/sidebar";
 import { AppSidebar } from "./_components/AppSidebar";
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Create Next App",

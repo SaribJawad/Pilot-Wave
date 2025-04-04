@@ -1,7 +1,6 @@
 import Image, { StaticImageData } from "next/image";
 import CaptionAndPlatformDisplay from "./CaptionAndPlatformDisplay";
 import { BiComment } from "react-icons/bi";
-import { useState } from "react";
 import { Dialog, DialogTrigger } from "@/app/_components/ui/dialog";
 import CommentReplyDialog from "./CommentReplyDialog";
 

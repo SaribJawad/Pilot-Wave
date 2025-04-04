@@ -10,7 +10,6 @@ interface ICaptionAndPlatformDisplayProps {
 }
 function CaptionAndPlatformDisplay({
   caption,
-  user,
   platform,
 }: ICaptionAndPlatformDisplayProps) {
   const icon =

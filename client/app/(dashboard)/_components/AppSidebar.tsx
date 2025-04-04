@@ -16,7 +16,6 @@ import { IoAnalyticsSharp, IoClose, IoSettingsOutline } from "react-icons/io5";
 import { RxDashboard } from "react-icons/rx";
 import LogoutButton from "./LogoutButton";
 import SideBarLink from "./SideBarLink";
-import Link from "next/link";
 
 // Menu items.
 const items = [

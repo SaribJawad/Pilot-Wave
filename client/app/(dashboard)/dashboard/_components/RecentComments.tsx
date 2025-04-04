@@ -38,10 +38,10 @@ function RecentComments() {
 
   const [viewAll, setViewAll] = useState<boolean>(false);
 
-  const filteredComments = recentComments.slice(
-    0,
-    viewAll ? recentComments.length : 3
-  );
+  //   const filteredComments = recentComments.slice(
+  //     0,
+  //     viewAll ? recentComments.length : 3
+  //   );
 
   return (
     <div className="lg:col-span-2 col-span-1 bg-white    rounded-lg shadow-sm border border-foreground/2 shadow-gray-400/30">
