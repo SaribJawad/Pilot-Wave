@@ -1,4 +1,4 @@
-import SectionHeading from "./SectionHeading";
+import SectionHeader from "./SectionHeader";
 import image1 from "@/public/testimonials/image1.jpeg";
 import image2 from "@/public/testimonials/image2.jpeg";
 import image3 from "@/public/testimonials/image3.jpeg";
@@ -32,9 +32,9 @@ function TestimonialsSection() {
   return (
     <section
       id="testimonials"
-      className="  text-foreground flex flex-col gap-12  bg-white w-full sm:px-10 px-4 py-16 "
+      className="scroll-mt-15  text-foreground flex flex-col gap-12  bg-white w-full sm:px-10 px-4 py-16 "
     >
-      <SectionHeading
+      <SectionHeader
         description="Hear from the professionals who have transformed their social media workflow with PostMaster."
         title="Testimonials"
         heading="Loved by Social Media Managers"

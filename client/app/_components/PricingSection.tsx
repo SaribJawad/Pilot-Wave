@@ -1,5 +1,5 @@
 import PricingCard from "./PricingCard";
-import SectionHeading from "./SectionHeading";
+import SectionHeader from "./SectionHeader";
 
 function PricingSection() {
   const pricing = [
@@ -9,10 +9,11 @@ function PricingSection() {
       description:
         "Perfect for individuals and small businesses just getting started.",
       features: [
-        " Unlimited social accounts",
+        "Unlimited social accounts",
         "Full access to posting & scheduling",
         "AI-powered management",
         "Advanced analytics dashboard",
+        "1-day temporary storage",
       ],
     },
     {
@@ -25,6 +26,7 @@ function PricingSection() {
         "Full comment management",
         "Comprehensive analytics",
         "AI-powered comment replies",
+        "3 weeks of storage",
       ],
     },
     {
@@ -38,6 +40,7 @@ function PricingSection() {
         "AI-powered post & comment automation",
         "In-depth analytics & reporting",
         "Priority support",
+        "2 months of storage",
       ],
     },
   ];
@@ -45,9 +48,9 @@ function PricingSection() {
   return (
     <section
       id="pricing"
-      className=" text-foreground bg-background-secondary w-full  sm:px-10 px-4 py-16 flex flex-col gap-12 lg:items-center items-start justify-center"
+      className="scroll-mt-15 text-foreground bg-background-secondary w-full  sm:px-10 px-4 py-16 flex flex-col gap-12 lg:items-center items-start justify-center"
     >
-      <SectionHeading
+      <SectionHeader
         title="Pricing"
         heading="Start Simplifying Your Social Media Today"
         description="Choose the plan that fits your needs. No hidden fees, cancel anytime."

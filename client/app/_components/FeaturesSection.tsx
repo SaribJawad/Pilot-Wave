@@ -3,7 +3,7 @@ import Feature from "./Feature";
 import { MdOutlineModeComment } from "react-icons/md";
 import { GoHubot } from "react-icons/go";
 import { FaRegClock, FaSuperpowers } from "react-icons/fa6";
-import SectionHeading from "./SectionHeading";
+import SectionHeader from "./SectionHeader";
 
 function FeaturesSection() {
   const features = [
@@ -49,7 +49,7 @@ function FeaturesSection() {
       id="features"
       className="scroll-mt-15 text-foreground bg-white w-full  sm:px-10 px-4 py-16 flex flex-col gap-12 lg:items-center items-start justify-center"
     >
-      <SectionHeading
+      <SectionHeader
         heading="Everything You Need to Master PilotWave"
         title="Features"
         description="Simplify your social media workflow with powerful tools designed for efficiency and results."
