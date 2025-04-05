@@ -1,24 +1,26 @@
 "use client";
 
 import { Button } from "@/app/_components/ui/button";
-import { useState } from "react";
 
 type Platform = "instagram" | "facebook" | "x" | "linkedin";
 
-function PostToPlatformComponent() {
-  const [selectedPlatforms, setSelectedPlatforms] = useState<Platform[]>();
-  const platforms = ["facebook", "x", "linkedin", "Instagram"];
+interface IPostToPlatformComponentProps {
+  selectedPlatforms: Platform[];
+  setSelectedPlatforms: (arg: Platform[]) => void;
+}
+
+function PostToPlatformComponent({
+  selectedPlatforms,
+  setSelectedPlatforms,
+}: IPostToPlatformComponentProps) {
+  const platforms: Platform[] = ["facebook", "x", "linkedin", "instagram"];
 
   const selectPlatform = (platform: Platform) => {
-    setSelectedPlatforms((prevState) => {
-      if (prevState) {
-        return prevState.includes(platform)
-          ? prevState.filter((p) => p !== platform)
-          : [...prevState, platform];
-      } else {
-        return [platform];
-      }
-    });
+    const newPlatforms = selectedPlatforms.includes(platform)
+      ? selectedPlatforms.filter((p) => p !== platform)
+      : [...selectedPlatforms, platform];
+
+    setSelectedPlatforms(newPlatforms);
   };
 
   return (

@@ -13,6 +13,7 @@ function RecentComments() {
       comment:
         "activity Love the new collection! Will these be available internationally?",
       user: "Sarah Johnson",
+      userImage: image,
       timeAgo: "2 minutes ago",
       platform: "instagram",
     },
@@ -22,6 +23,7 @@ function RecentComments() {
       comment:
         "activity Love the new collection! Will these be available internationally?",
       user: "Sarah Johnson",
+      userImage: image,
       timeAgo: "2 minutes ago",
       platform: "facebook",
     },
@@ -31,17 +33,13 @@ function RecentComments() {
       comment:
         "activity Love the new collection! Will these be available internationally?",
       user: "Sarah Johnson",
+      userImage: image,
       timeAgo: "2 minutes ago",
       platform: "x",
     },
   ];
 
   const [viewAll, setViewAll] = useState<boolean>(false);
-
-  //   const filteredComments = recentComments.slice(
-  //     0,
-  //     viewAll ? recentComments.length : 3
-  //   );
 
   return (
     <div className="lg:col-span-2 col-span-1 bg-white    rounded-lg shadow-sm border border-foreground/2 shadow-gray-400/30">

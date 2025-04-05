@@ -1,7 +1,5 @@
 import React from "react";
-import { SlSocialFacebook } from "react-icons/sl";
-
-import { FaInstagram, FaLinkedin, FaXTwitter } from "react-icons/fa6";
+import { useGetSocialMedia } from "../../_customHooks/useGetSocialMedia";
 
 interface ICaptionAndPlatformDisplayProps {
   caption: string;
@@ -12,25 +10,7 @@ function CaptionAndPlatformDisplay({
   caption,
   platform,
 }: ICaptionAndPlatformDisplayProps) {
-  const icon =
-    platform === "x" ? (
-      <FaXTwitter size={12} />
-    ) : platform === "instagram" ? (
-      <FaInstagram size={15} />
-    ) : platform === "facebook" ? (
-      <SlSocialFacebook size={13} />
-    ) : (
-      <FaLinkedin size={15} />
-    );
-
-  const color =
-    platform === "x"
-      ? "text-black bg-black/20"
-      : platform === "facebook"
-      ? "text-facebook bg-facebook-light"
-      : platform === "instagram"
-      ? "text-instagram bg-instagram-light"
-      : "text-linkedin bg-linkedin-light";
+  const { color, icon } = useGetSocialMedia({ platform });
 
   return (
     <div className="flex items-center  gap-2">

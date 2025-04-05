@@ -40,7 +40,6 @@ function SheduleComponent() {
             mode="single"
             selected={date}
             onSelect={setDate}
-            initialFocus
             className="bg-white border-foreground/20 shadow-sm rounded-lg"
           />
         </PopoverContent>

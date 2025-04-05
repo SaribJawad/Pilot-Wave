@@ -14,12 +14,30 @@ import { BsRobot } from "react-icons/bs";
 import FileUploadComponent from "./FileUploadComponent";
 import PostToPlatformComponent from "./PostToPlatformComponent";
 import SheduleComponent from "./SheduleComponent";
+import { useState } from "react";
+
+type Platform = "instagram" | "facebook" | "x" | "linkedin";
 
 interface IEditCreatepostDialogProps {
   title: string;
+  caption?: string;
+  time?: string;
+  date?: string;
+  platform?: Platform[];
 }
 
-function EditCreatePostDialog({ title }: IEditCreatepostDialogProps) {
+function EditCreatePostDialog({
+  title,
+  caption,
+  //   date,
+  platform,
+}: //   time,
+IEditCreatepostDialogProps) {
+  const [captionInput, setCaptionInput] = useState(caption ?? "");
+  const [selectedPlatforms, setSelectedPlatforms] = useState<Platform[]>(
+    platform!
+  );
+
   return (
     <DialogContent className="[&>button]:hidden md:max-w-[655px] max-h-[calc(100vh-2rem)] overflow-auto ">
       <DialogHeader className=" flex-row items-center justify-between">
@@ -39,6 +57,8 @@ function EditCreatePostDialog({ title }: IEditCreatepostDialogProps) {
           </h4>
           <div className="relative w-full">
             <Textarea
+              value={captionInput}
+              onChange={(e) => setCaptionInput(e.target.value)}
               placeholder="Type your message here."
               className=" min-h-[150px] max-h-[200px] md:max-w-[620px] max-w-[calc(100vw-4rem)]  resize-y text-sm"
             />
@@ -49,7 +69,10 @@ function EditCreatePostDialog({ title }: IEditCreatepostDialogProps) {
         </div>{" "}
         <FileUploadComponent />
         <div className="grid lg:grid-cols-2 grid-cols-1 gap-4">
-          <PostToPlatformComponent />
+          <PostToPlatformComponent
+            selectedPlatforms={selectedPlatforms}
+            setSelectedPlatforms={setSelectedPlatforms}
+          />
           <SheduleComponent />
         </div>
       </section>

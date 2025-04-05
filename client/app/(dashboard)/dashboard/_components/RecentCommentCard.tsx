@@ -2,25 +2,36 @@ import Image, { StaticImageData } from "next/image";
 import CaptionAndPlatformDisplay from "./CaptionAndPlatformDisplay";
 import { BiComment } from "react-icons/bi";
 import { Dialog, DialogTrigger } from "@/app/_components/ui/dialog";
-import CommentReplyDialog from "./CommentReplyDialog";
+import dynamic from "next/dynamic";
+
+const DynamicCommentReplyDialog = dynamic(
+  () => import("./CommentReplyDialog"),
+  {
+    ssr: false,
+  }
+);
 
 interface IRecentActivityCardProps {
   caption: string;
   postThumbnail: StaticImageData;
   comment: string;
   user: string;
+  userImage: StaticImageData;
   timeAgo: string;
   platform: string;
 }
 
-function RecentCommentCard({
-  caption,
-  postThumbnail,
-  comment,
-  user,
-  timeAgo,
-  platform,
-}: IRecentActivityCardProps) {
+function RecentCommentCard(props: IRecentActivityCardProps) {
+  const {
+    caption,
+    postThumbnail,
+    comment,
+    user,
+    // userImage,
+    timeAgo,
+    platform,
+  } = props;
+
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -54,7 +65,7 @@ function RecentCommentCard({
           </div>
         </div>
       </DialogTrigger>
-      <CommentReplyDialog />
+      <DynamicCommentReplyDialog {...props} />
     </Dialog>
   );
 }

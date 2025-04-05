@@ -1,5 +1,7 @@
 import UpComingPostCard from "./UpComingPostCard";
 
+type Platform = "instagram" | "facebook" | "x" | "linkedin";
+
 function UpcomingPosts() {
   const tempUpComingPosts = [
     {
@@ -7,14 +9,14 @@ function UpcomingPosts() {
         "Excited to announce our summer collection is now available! Check out our website for more details.",
       date: "today",
       time: "2:30 PM",
-      platform: ["instagram", "facebook", "x"],
+      platform: ["instagram", "facebook", "x"] as Platform[],
     },
     {
       caption:
         "Behind the scenes look at our latest photoshoot. #BehindTheScenes #NewCollection",
       date: "tommorrow",
       time: "10:00 AM",
-      platform: ["facebook", "x"],
+      platform: ["facebook", "x"] as Platform[],
     },
   ];
 
